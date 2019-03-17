@@ -3,6 +3,7 @@ package com.fashion.www.config;
 import java.nio.charset.StandardCharsets;
 
 import javax.servlet.FilterRegistration;
+import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
@@ -31,6 +32,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
         ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
+        registration.setMultipartConfig(new MultipartConfigElement("E:/project/fashion/temp"));
         
         CharacterEncodingFilter cef = new CharacterEncodingFilter(); 
 		cef.setEncoding("UTF-8");

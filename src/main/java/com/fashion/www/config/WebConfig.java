@@ -1,5 +1,6 @@
 package com.fashion.www.config;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -33,10 +36,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		return viewResolver;
 	}
 //	添加对静态资源的处理
-	   @Override
-	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-	        configurer.enable();
-	    }
+	
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer config){
+		super.configureDefaultServletHandling(config);
+		config.enable();
+	}
 	@Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 //        super.configureMessageConverters(converters);
@@ -59,5 +63,9 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		converter.setSupportedMediaTypes(mediaTypes);
 		converters.add(converter);
     }
+	@Bean
+	public MultipartResolver multipartResolver() throws IOException {
+	    return new StandardServletMultipartResolver();
+	}
 	
 }

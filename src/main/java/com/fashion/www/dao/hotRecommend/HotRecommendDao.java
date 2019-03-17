@@ -104,4 +104,35 @@ public class HotRecommendDao {
 		System.out.println(count);
 		return count;
 	}
+	public void createHotRecommend(String title,String coverImage,String description){
+		String sqlStr = "INSERT INTO goods_recommend (title,coverImage,description) VALUES (?,?,?)";
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try{
+			conn = dataSource.getConnection();
+			stmt = conn.prepareStatement(sqlStr);
+			stmt.setString(1, title);
+			stmt.setString(2, coverImage);
+			stmt.setString(3, description);
+			stmt.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try{
+				if (stmt != null){
+					stmt.close();
+				}
+			}catch(SQLException e){
+				e.printStackTrace();
+			}finally{
+				try{
+					if(conn != null){
+						conn.close();
+					}
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 }

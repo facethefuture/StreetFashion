@@ -15,7 +15,7 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-@ComponentScan(basePackages={"com.fashion.www.dao","com.fashion.www.dao.hotRecommend"})
+@ComponentScan(basePackages={"com.fashion.www.dao","com.fashion.www.dao.hotRecommend","com.fashion.www.upload"})
 public class RootConfig extends WebMvcConfigurerAdapter{
 	@Bean
 	public DataSource getDataSource(){
