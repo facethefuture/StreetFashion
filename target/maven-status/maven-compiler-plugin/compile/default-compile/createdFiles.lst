@@ -1,3 +1,4 @@
+com\fashion\www\page\Page.class
 com\fashion\www\config\RootConfig.class
 com\fashion\www\config\MyWebApplicationInitializer.class
 com\fashion\www\controller\hotRecommend\HotRecommend.class

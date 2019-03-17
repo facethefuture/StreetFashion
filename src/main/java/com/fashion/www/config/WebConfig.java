@@ -33,9 +33,10 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		return viewResolver;
 	}
 //	添加对静态资源的处理
-	public void configgureDefaultServletHandling(DefaultServletHandlerConfigurer config){
-		config.enable();
-	}
+	   @Override
+	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+	        configurer.enable();
+	    }
 	@Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 //        super.configureMessageConverters(converters);
