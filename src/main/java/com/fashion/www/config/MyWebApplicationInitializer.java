@@ -18,13 +18,14 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
 
 	public void onStartup(ServletContext servletCxt) throws ServletException{
 		
-		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		rootContext.register(com.fashion.www.config.RootConfig.class);
-		servletCxt.addListener(new ContextLoaderListener(rootContext));
+		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+		ac.register(com.fashion.www.config.RootConfig.class);
+        ac.register(com.fashion.www.config.WebConfig.class);
+		servletCxt.addListener(new ContextLoaderListener(ac));
 
         // Load Spring web application configuration
-        AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
-        ac.register(com.fashion.www.config.WebConfig.class);
+        // AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+
 
         
         // Create and register the DispatcherServlet

@@ -1,6 +1,7 @@
 com\fashion\www\page\Page.class
 com\fashion\www\config\RootConfig.class
 com\fashion\www\config\MyWebApplicationInitializer.class
+com\fashion\www\upload\UploadController.class
 com\fashion\www\controller\hotRecommend\HotRecommend.class
 com\fashion\www\dao\hotRecommend\HotRecommendDao.class
 com\fashion\www\goods\LipStick.class
