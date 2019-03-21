@@ -18,16 +18,15 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
 
 	public void onStartup(ServletContext servletCxt) throws ServletException{
 		
-		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
-		ac.register(com.fashion.www.config.RootConfig.class);
-        ac.register(com.fashion.www.config.WebConfig.class);
-		servletCxt.addListener(new ContextLoaderListener(ac));
+		AnnotationConfigWebApplicationContext rootConfig = new AnnotationConfigWebApplicationContext();
+		rootConfig.register(com.fashion.www.config.RootConfig.class);
+
+		servletCxt.addListener(new ContextLoaderListener(rootConfig));
 
         // Load Spring web application configuration
-        // AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+         AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+         ac.register(com.fashion.www.config.WebConfig.class);
 
-
-        
         // Create and register the DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(ac);
         ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
@@ -35,12 +34,12 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
         registration.addMapping("/");
         registration.setMultipartConfig(new MultipartConfigElement("E:/project/fashion/temp"));
         
-        CharacterEncodingFilter cef = new CharacterEncodingFilter(); 
-		cef.setEncoding("UTF-8");
-		cef.setForceEncoding(true);
-		FilterRegistration.Dynamic cefilter = servletCxt.addFilter("encodingFilter", CharacterEncodingFilter.class);
-		cefilter.addMappingForUrlPatterns(null, false, "/");
+        FilterRegistration.Dynamic encodingFilter = servletCxt.addFilter("encodingFilter", CharacterEncodingFilter.class);
+        encodingFilter.setInitParameter("encoding", String.valueOf(StandardCharsets.UTF_8));
+        encodingFilter.setInitParameter("forceEncoding", "true");
+		encodingFilter.addMappingForUrlPatterns(null, false, "/*");
 
 	    }
 
 }
+

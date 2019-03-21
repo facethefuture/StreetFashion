@@ -27,7 +27,7 @@ public class HotRecommend {
 		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage));
 		return JSON.toJSONString(pageObj);
 	}
-	@RequestMapping(value="/upload")
+	@RequestMapping(value="/user/upload")
 	@ResponseBody
 	public String upload(MultipartHttpServletRequest request,@RequestParam(value="description") String description){
 		System.out.println("上传");

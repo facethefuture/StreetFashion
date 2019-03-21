@@ -11,4 +11,9 @@ public class Hellow {
 	public String testHellow(){
 		return "hellow";
 	}
+	@RequestMapping(value="/user/test")
+	@ResponseBody
+	public String testSecurity(){
+		return "Security";
+	}
 }
