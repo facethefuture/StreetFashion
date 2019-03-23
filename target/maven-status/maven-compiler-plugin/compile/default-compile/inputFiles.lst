@@ -12,10 +12,13 @@ E:\project\fashion\src\main\java\com\fashion\www\config\MyWebApplicationInitiali
 E:\project\fashion\src\main\java\com\fashion\www\page\Page.java
 E:\project\fashion\src\main\java\com\fashion\www\upload\UploadController.java
 E:\project\fashion\src\main\java\com\fashion\www\config\MyAbstractSecurityWebApplicationInitializer.java
+E:\project\fashion\src\main\java\com\fashion\www\dao\hotRecommend\PhotographyModuleDao.java
 E:\project\fashion\src\main\java\com\fashion\www\goods\Goods.java
+E:\project\fashion\src\main\java\com\fashion\www\goods\PhotographyModule.java
 E:\project\fashion\src\main\java\com\fashion\www\config\FastJSONMessageConverter.java
 E:\project\fashion\src\main\java\com\fashion\www\config\SecurityConfig.java
 E:\project\fashion\src\main\java\com\fashion\www\config\RootConfig.java
 E:\project\fashion\src\main\java\com\fashion\www\controller\hotRecommend\HotRecommend.java
+E:\project\fashion\src\main\java\com\fashion\www\controller\hotRecommend\PhotographyModuleController.java
 E:\project\fashion\src\main\java\com\fashion\www\goods\LipStick.java
 E:\project\fashion\src\main\java\com\fashion\www\login\LoginController.java

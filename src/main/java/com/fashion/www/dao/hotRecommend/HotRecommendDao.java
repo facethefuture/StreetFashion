@@ -17,20 +17,33 @@ import com.fashion.www.goods.Goods;
 public class HotRecommendDao {
 	@Autowired
 	private DataSource dataSource;
-	public List<Goods> queryHotRecommends(int currentPage,int perPage){
-		String querySql = "SELECT id,title,coverImage,description FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
+	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description){
+		String querySql = "SELECT id,title,coverImage,description,tags FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
+
+		
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		List<Goods> goods = new ArrayList<Goods>();
 		try{
 			conn = dataSource.getConnection();
-			stmt = conn.prepareStatement(querySql);
-			stmt.setInt(1, (currentPage - 1) * perPage);
-			stmt.setInt(2, currentPage * perPage);
+			if (description == null){
+				stmt = conn.prepareStatement(querySql);
+				stmt.setInt(1, (currentPage - 1) * perPage);
+				stmt.setInt(2, currentPage * perPage);
+			}else{
+				String querySql2 = "SELECT id,title,coverImage,description,tags FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + currentPage * perPage;
+				System.out.println(querySql2);
+				stmt = conn.prepareStatement(querySql2);
+//				stmt.setInt(1, (currentPage - 1) * perPage);
+//				stmt.setInt(2, currentPage * perPage);
+				
+			}
+			
+		
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description")));
+				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags")));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -61,8 +74,9 @@ public class HotRecommendDao {
 		}
 		return goods;
 	}
-	public int getTotalCount(){
-		String querySql = "SELECT COUNT(id) AS count FROM goods_recommend ";
+	public int getTotalCount(String description){
+		String querySql = description == null ? "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = '1'" : "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
+		System.out.println(querySql);
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;

@@ -22,9 +22,11 @@ public class HotRecommend {
 	private HotRecommendDao hotRecommend;
 	@RequestMapping(value="/hotRecommend")
 	@ResponseBody
-	public String getHotRecommend(@RequestParam(value="page",defaultValue="1") int page,@RequestParam(value="perPage",defaultValue="10") int perPage){
-		Page<Goods> pageObj = new Page<Goods>(page,perPage,hotRecommend.getTotalCount());
-		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage));
+	public String getHotRecommend(@RequestParam(value="page",defaultValue="1") int page,@RequestParam(value="perPage",defaultValue="10") int perPage,@RequestParam(value="description",required=false) String description){
+		System.out.println(description);
+		System.out.println(description == null);
+		Page<Goods> pageObj = new Page<Goods>(page,perPage,hotRecommend.getTotalCount(description));
+		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage,description));
 		return JSON.toJSONString(pageObj);
 	}
 	@RequestMapping(value="/user/upload")
