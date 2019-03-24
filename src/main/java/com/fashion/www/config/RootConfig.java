@@ -16,7 +16,7 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-@ComponentScan(basePackages={"com.fashion.www.dao","com.fashion.www.dao.hotRecommend","com.fashion.www.upload","com.fashion.www.user","com.fashion.www.login"})
+@ComponentScan(basePackages={"com.fashion.www.dao","com.fashion.www.dao.hotRecommend","com.fashion.www.upload","com.fashion.www.user","com.fashion.www.login","com.fashion.www.uploadFile"})
 //@Import({org.apache.maven.archetypes.securityConfig.SecurityWebApplicationInitializer.class})
 @Import({com.fashion.www.config.SecurityConfig.class})
 public class RootConfig extends WebMvcConfigurerAdapter{

@@ -1,7 +1,6 @@
 com\fashion\www\page\Page.class
 com\fashion\www\dao\hotRecommend\UserDao.class
 com\fashion\www\config\RootConfig.class
-com\fashion\www\upload\UploadController.class
 com\fashion\www\config\SecurityConfig.class
 com\fashion\www\user\UserService.class
 com\fashion\www\hellow\Hellow.class
@@ -18,6 +17,7 @@ com\fashion\www\goods\PhotographyModule.class
 com\fashion\www\goods\LipStick.class
 com\fashion\www\user\Role.class
 com\fashion\www\goods\Goods.class
+com\fashion\www\controller\hotRecommend\UploadFile.class
 com\fashion\www\controller\hotRecommend\PhotographyModuleController.class
 com\fashion\www\config\MyAbstractSecurityWebApplicationInitializer.class
 com\fashion\www\config\WebConfig.class
