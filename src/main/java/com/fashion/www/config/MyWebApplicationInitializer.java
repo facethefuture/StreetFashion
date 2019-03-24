@@ -32,7 +32,8 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
         ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
-        registration.setMultipartConfig(new MultipartConfigElement("E:/project/fashion/temp"));
+        String path = servletCxt.getRealPath("/temp");
+        registration.setMultipartConfig(new MultipartConfigElement(path));
         
         FilterRegistration.Dynamic encodingFilter = servletCxt.addFilter("encodingFilter", CharacterEncodingFilter.class);
         encodingFilter.setInitParameter("encoding", String.valueOf(StandardCharsets.UTF_8));
