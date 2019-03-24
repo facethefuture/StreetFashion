@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -18,7 +19,7 @@ public class HotRecommendDao {
 	@Autowired
 	private DataSource dataSource;
 	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description){
-		String querySql = "SELECT id,title,coverImage,description,tags FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
+		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
 
 		
 		Connection conn = null;
@@ -32,7 +33,7 @@ public class HotRecommendDao {
 				stmt.setInt(1, (currentPage - 1) * perPage);
 				stmt.setInt(2, currentPage * perPage);
 			}else{
-				String querySql2 = "SELECT id,title,coverImage,description,tags FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + currentPage * perPage;
+				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + currentPage * perPage;
 				System.out.println(querySql2);
 				stmt = conn.prepareStatement(querySql2);
 //				stmt.setInt(1, (currentPage - 1) * perPage);
@@ -43,7 +44,7 @@ public class HotRecommendDao {
 		
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags")));
+				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime")));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -119,7 +120,8 @@ public class HotRecommendDao {
 		return count;
 	}
 	public void createHotRecommend(String title,String coverImage,String description){
-		String sqlStr = "INSERT INTO goods_recommend (title,coverImage,description) VALUES (?,?,?)";
+		int createdTime =(int) (new Date().getTime() / 1000);
+		String sqlStr = "INSERT INTO goods_recommend (title,coverImage,description,createdTime) VALUES (?,?,?,?)";
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		try{
@@ -128,6 +130,7 @@ public class HotRecommendDao {
 			stmt.setString(1, title);
 			stmt.setString(2, coverImage);
 			stmt.setString(3, description);
+			stmt.setInt(4, createdTime);
 			stmt.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();

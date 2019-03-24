@@ -33,6 +33,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer{
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
         String path = servletCxt.getRealPath("/temp");
+        System.out.println(path);
         registration.setMultipartConfig(new MultipartConfigElement(path));
         
         FilterRegistration.Dynamic encodingFilter = servletCxt.addFilter("encodingFilter", CharacterEncodingFilter.class);

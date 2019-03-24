@@ -29,36 +29,4 @@ public class HotRecommend {
 		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage,description));
 		return JSON.toJSONString(pageObj);
 	}
-	@RequestMapping(value="/user/upload")
-	@ResponseBody
-	public String upload(MultipartHttpServletRequest request,@RequestParam(value="description") String description){
-		System.out.println("上传");
-		System.out.println(description);
-		String path = request.getSession().getServletContext().getRealPath("/assets/image/hotRecommend/");
-		System.out.println(path);
-		try {
-			MultipartFile file = request.getFile("image");
-			File imageFile = new File(path + '/' + file.getOriginalFilename());
-			file.transferTo(imageFile);
-			String coverImagePath = "/assets/image/hotRecommend/" + file.getOriginalFilename();
-			hotRecommend.createHotRecommend("上传测试", coverImagePath, description);
-			return "success";
-		} catch (IllegalStateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return "failed";
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return "failed";
-		}
-		
-	}
-	
-	@RequestMapping(value="/testUpload")
-	@ResponseBody
-	public String testUpload(@RequestParam("name") String name){
-		System.out.println(name);
-		return "test";
-	}
 }
