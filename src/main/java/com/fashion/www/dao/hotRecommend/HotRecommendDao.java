@@ -19,7 +19,7 @@ public class HotRecommendDao {
 	@Autowired
 	private DataSource dataSource;
 	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description){
-		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
+		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' ORDER BY id DESC LIMIT ?,?";
 
 		
 		Connection conn = null;
