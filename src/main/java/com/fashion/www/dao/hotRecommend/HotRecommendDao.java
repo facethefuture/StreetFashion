@@ -31,9 +31,9 @@ public class HotRecommendDao {
 			if (description == null){
 				stmt = conn.prepareStatement(querySql);
 				stmt.setInt(1, (currentPage - 1) * perPage);
-				stmt.setInt(2, currentPage * perPage);
+				stmt.setInt(2, perPage);
 			}else{
-				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + currentPage * perPage;
+				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
 				System.out.println(querySql2);
 				stmt = conn.prepareStatement(querySql2);
 //				stmt.setInt(1, (currentPage - 1) * perPage);
@@ -151,5 +151,48 @@ public class HotRecommendDao {
 				}
 			}
 		}
+	}
+	public Goods findStreetSnapById(int id){
+		String sql = "SELECT * FROM goods_recommend WHERE id = ?";
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		Goods good = null;
+		try{
+			conn = dataSource.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			while(rs.next()){
+				good = new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try{
+				if(rs != null){
+					rs.close();
+				}
+			}catch(SQLException e){
+				e.printStackTrace();
+			}finally{
+				try{
+					if(stmt != null){
+						stmt.close();
+					}
+				}catch(SQLException e){
+					e.printStackTrace();
+				}finally{
+					try{
+						if(conn != null){
+							conn.close();
+						}
+					}catch(SQLException e){
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		return good;
 	}
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,5 +29,11 @@ public class HotRecommend {
 		Page<Goods> pageObj = new Page<Goods>(page,perPage,hotRecommend.getTotalCount(description));
 		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage,description));
 		return JSON.toJSONString(pageObj);
+	}
+	@RequestMapping(value="/streetSnap/{id}")
+	@ResponseBody
+	public String findOneStreetSnap(@PathVariable("id") int id){
+		Goods good = hotRecommend.findStreetSnapById(id);
+		return JSON.toJSONString(good);
 	}
 }

@@ -25,7 +25,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages={"com.fashion.www.hellow,com.fashion.www.controller.hotRecommend","com.fashion.www.upload"})
+@ComponentScan(basePackages={"com.fashion.www.hellow,com.fashion.www.controller"})
 public class WebConfig extends WebMvcConfigurerAdapter{
 	@Bean
 	public ViewResolver viewResolver() {
