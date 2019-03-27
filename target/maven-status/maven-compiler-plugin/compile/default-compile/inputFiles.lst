@@ -1,7 +1,6 @@
 E:\project\fashion\src\main\java\com\fashion\www\dao\hotRecommend\UserDao.java
 E:\project\fashion\src\main\java\com\fashion\www\config\WebConfig.java
 E:\project\fashion\src\main\java\com\fashion\www\hellow\Hellow.java
-E:\project\fashion\src\main\java\com\fashion\www\controller\hotRecommend\UploadFile.java
 E:\project\fashion\src\main\java\com\fashion\www\dao\hotRecommend\HotRecommendDao.java
 E:\project\fashion\src\main\java\com\fashion\www\config\MyAuthenticationSuccessHandler.java
 E:\project\fashion\src\main\java\com\fashion\www\user\UserService.java
@@ -20,5 +19,6 @@ E:\project\fashion\src\main\java\com\fashion\www\config\SecurityConfig.java
 E:\project\fashion\src\main\java\com\fashion\www\config\RootConfig.java
 E:\project\fashion\src\main\java\com\fashion\www\controller\hotRecommend\HotRecommend.java
 E:\project\fashion\src\main\java\com\fashion\www\controller\hotRecommend\PhotographyModuleController.java
+E:\project\fashion\src\main\java\com\fashion\www\controller\upload\UploadFile.java
 E:\project\fashion\src\main\java\com\fashion\www\goods\LipStick.java
 E:\project\fashion\src\main\java\com\fashion\www\login\LoginController.java

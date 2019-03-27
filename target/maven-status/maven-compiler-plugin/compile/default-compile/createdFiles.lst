@@ -14,10 +14,10 @@ com\fashion\www\config\MyAuthenticationSuccessHandler.class
 com\fashion\www\dao\hotRecommend\HotRecommendDao.class
 com\fashion\www\login\LoginController.class
 com\fashion\www\goods\PhotographyModule.class
+com\fashion\www\controller\upload\UploadFile.class
 com\fashion\www\goods\LipStick.class
 com\fashion\www\user\Role.class
 com\fashion\www\goods\Goods.class
-com\fashion\www\controller\hotRecommend\UploadFile.class
 com\fashion\www\controller\hotRecommend\PhotographyModuleController.class
 com\fashion\www\config\MyAbstractSecurityWebApplicationInitializer.class
 com\fashion\www\config\WebConfig.class
