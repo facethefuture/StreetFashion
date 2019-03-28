@@ -4,11 +4,13 @@ com\fashion\www\config\RootConfig.class
 com\fashion\www\config\SecurityConfig.class
 com\fashion\www\user\UserService.class
 com\fashion\www\hellow\Hellow.class
+com\fashion\www\dao\photography\PhotographyDao.class
 com\fashion\www\config\FastJSONMessageConverter.class
 com\fashion\www\config\MyWebApplicationInitializer.class
 com\fashion\www\user\User.class
 com\fashion\www\config\MyAuthenticationFailureHandler.class
 com\fashion\www\dao\hotRecommend\PhotographyModuleDao.class
+com\fashion\www\controller\photography\PhotographyController.class
 com\fashion\www\controller\hotRecommend\HotRecommend.class
 com\fashion\www\config\MyAuthenticationSuccessHandler.class
 com\fashion\www\dao\hotRecommend\HotRecommendDao.class
