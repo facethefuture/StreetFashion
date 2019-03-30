@@ -150,9 +150,9 @@
                 <path>/</path>
                 <port>80</port>
                 <uriEncoding>UTF-8</uriEncoding>
-                <httpsPort>80</httpsPort>
-      <keystoreFile>./www.4bbbb.cn.jks</keystoreFile>
-      <keystorePass></keystorePass>
+                <httpsPort>443</httpsPort>
+      <keystoreFile>C:/www.4bbbb.cn.jks</keystoreFile>
+      <keystorePass>44226p222h</keystorePass>
             </configuration>
         </plugin>
     </plugins>
