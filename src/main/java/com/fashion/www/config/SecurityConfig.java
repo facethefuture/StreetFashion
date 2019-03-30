@@ -33,16 +33,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests()
+		http.csrf().disable().authorizeRequests().anyRequest().permitAll();
 		 //允许以下请求
-        .antMatchers("/login").permitAll().antMatchers("/hellow").permitAll()
+//        .antMatchers("/login").permitAll().antMatchers("/hellow").permitAll()
         // 所有请求需要身份认证
-        .anyRequest().authenticated()
+//        .anyRequest().authenticated()
       //验证登陆
-        .and()
-        .addFilter(new JWTLoginFilter(authenticationManager()))
+//        .and()
+//        .addFilter(new JWTLoginFilter(authenticationManager()))
         //验证token
-        .addFilter(new JWTAuthenticationFilter(authenticationManager()));
+//        .addFilter(new JWTAuthenticationFilter(authenticationManager()));
 //		.and().formLogin().loginPage("/login").successHandler(
 //				new MyAuthenticationSuccessHandler()
 //		).failureHandler(new MyAuthenticationFailureHandler()).loginProcessingUrl("/login")
