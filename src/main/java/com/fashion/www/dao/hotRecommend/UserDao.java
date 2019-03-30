@@ -17,6 +17,7 @@ public class UserDao {
 	@Autowired
 	private DataSource datasource;
 	public User queryUser(String username){
+		System.out.println("在dao里面");
 		User user = null;
 		String querySql = "SELECT id,username,password,nickname,role FROM user WHERE username = ?";
 		Connection conn = null;

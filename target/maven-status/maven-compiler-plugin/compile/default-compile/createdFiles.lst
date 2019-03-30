@@ -1,7 +1,9 @@
 com\fashion\www\page\Page.class
 com\fashion\www\dao\hotRecommend\UserDao.class
 com\fashion\www\config\RootConfig.class
+com\fashion\www\jwt\JWTLoginFilter.class
 com\fashion\www\config\SecurityConfig.class
+com\fashion\www\jwt\JWTAuthenticationFilter.class
 com\fashion\www\user\UserService.class
 com\fashion\www\hellow\Hellow.class
 com\fashion\www\dao\photography\PhotographyDao.class

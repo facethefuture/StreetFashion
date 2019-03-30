@@ -5,9 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Component
+@Controller
 public class LoginController {
-	@RequestMapping(value="/loginpage")
+	@RequestMapping(value="/login")
 	@ResponseBody
 	public String login(){
 		return "请登陆";
