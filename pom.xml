@@ -148,12 +148,11 @@
             <artifactId>tomcat7-maven-plugin</artifactId>
             <configuration>
                 <path>/</path>
-               	<SSLEnabled>true</SSLEnabled>
-               	<scheme>https</scheme>
+            	<!-- <port>80</port> -->
                 <uriEncoding>UTF-8</uriEncoding>
-                <httpsPort>80</httpsPort>
-      <keystoreFile>C:/www.4bbbb.cn.jks</keystoreFile>
-      <keystorePass>44226p222h</keystorePass>
+     			<keystoreFile>C:/www.4bbbb.cn.jks</keystoreFile>
+     			<keystorePass>44226p222h</keystorePass>
+     			<httpsPort>80</httpsPort>
             </configuration>
         </plugin>
     </plugins>
