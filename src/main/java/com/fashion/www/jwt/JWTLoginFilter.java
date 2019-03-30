@@ -2,6 +2,7 @@ package com.fashion.www.jwt;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.FilterChain;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.alibaba.fastjson.JSON;
@@ -37,7 +40,10 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter{
 		User user = new User(1,"admin","123","管理员","USER");
 		System.out.println("查询到人了");
 		System.out.println(user.getUsername());
-		return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword()));
+	   	List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+		System.out.println("授予USER角色");
+		authorities.add(new SimpleGrantedAuthority("ROLE_USER" ));
+		return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword(),authorities));
 	}
 	@Override
 	protected void successfulAuthentication(HttpServletRequest req,HttpServletResponse res,FilterChain chain,Authentication auth){

@@ -1,4 +1,4 @@
-0:0:0:0:0:0:0:1 - - [30/Mar/2019:18:07:12 +0800] "GET /login HTTP/1.1" 200 3 http-bio-443-exec-7 111
-0:0:0:0:0:0:0:1 - - [30/Mar/2019:18:07:12 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-443-exec-8 25
-0:0:0:0:0:0:0:1 - - [30/Mar/2019:21:54:22 +0800] "GET /login HTTP/1.1" 200 3 http-bio-443-exec-4 79
-0:0:0:0:0:0:0:1 - - [30/Mar/2019:21:54:22 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-443-exec-4 19
+0:0:0:0:0:0:0:1 - - [30/Mar/2019:22:40:04 +0800] "POST /login HTTP/1.1" 200 - http-bio-443-exec-1 1107
+0:0:0:0:0:0:0:1 - - [30/Mar/2019:22:40:29 +0800] "GET /photography HTTP/1.1" 200 2387 http-bio-443-exec-2 281
+0:0:0:0:0:0:0:1 - - [30/Mar/2019:22:40:40 +0800] "GET /photography HTTP/1.1" 200 2387 http-bio-443-exec-3 66
+0:0:0:0:0:0:0:1 - - [30/Mar/2019:22:42:28 +0800] "GET /photography HTTP/1.1" 200 2387 http-bio-443-exec-5 57
