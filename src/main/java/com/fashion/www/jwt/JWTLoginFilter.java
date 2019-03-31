@@ -16,17 +16,19 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
-import com.fashion.www.dao.hotRecommend.UserDao;
+import com.fashion.www.dao.userRepository.UserRepository;
 import com.fashion.www.user.User;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-
 public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter{
-	@Autowired
-	UserDao userDao;
+//	@Autowired
+//	UserRepository userRepository;
+//	这里因为没有默认的构造器，所以不能用@Component   不能被容器管理的话  就不能使用自动注入了  
+	UserRepository userRepository = new UserRepository();
 	private AuthenticationManager authenticationManager;
 	public JWTLoginFilter(AuthenticationManager authenticationManager){
 		System.out.println("构造");
@@ -35,9 +37,11 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter{
 	@Override
 	public Authentication attemptAuthentication(HttpServletRequest req,HttpServletResponse res) throws AuthenticationException{
 		System.out.println("执行了");
-//		System.out.println(req.getParameter("username"));
-//		User user = userDao.queryUser("admin");
-		User user = new User(1,"admin","123","管理员","USER");
+		System.out.println(req.getMethod());
+		System.out.println(req.getParameter("username"));
+		System.out.println("查询前");
+		User user = userRepository.findOneUser("ssss");
+//		User user = new User(1,"admin","123","管理员","USER");
 		System.out.println("查询到人了");
 		System.out.println(user.getUsername());
 	   	List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();

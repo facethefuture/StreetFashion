@@ -25,7 +25,9 @@ import com.fashion.www.user.UserService;
 @ComponentScan(basePackages={"com.fashion.www.user","com.fashion.www.login"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Autowired 
-	UserService userService; 
+	UserService userService;
+	@Autowired
+	JWTLoginFilter jwtLoginFilter;
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.userDetailsService(userService);

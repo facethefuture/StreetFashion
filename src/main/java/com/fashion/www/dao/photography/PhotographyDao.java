@@ -44,7 +44,7 @@ public class PhotographyDao {
 		
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime")));
+				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"),rs.getString("enable")));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -164,7 +164,7 @@ public class PhotographyDao {
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				good = new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"));
+				good = new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"),rs.getString("enable"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();

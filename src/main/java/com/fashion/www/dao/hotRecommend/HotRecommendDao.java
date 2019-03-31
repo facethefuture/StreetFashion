@@ -18,7 +18,7 @@ import com.fashion.www.goods.Goods;
 public class HotRecommendDao {
 	@Autowired
 	private DataSource dataSource;
-	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description){
+	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description,String enable){
 		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' ORDER BY id DESC LIMIT ?,?";
 
 		
@@ -29,11 +29,20 @@ public class HotRecommendDao {
 		try{
 			conn = dataSource.getConnection();
 			if (description == null){
-				stmt = conn.prepareStatement(querySql);
-				stmt.setInt(1, (currentPage - 1) * perPage);
-				stmt.setInt(2, perPage);
+				String querySql1 = null;
+				if (enable == null) {
+					querySql1 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM goods_recommend WHERE enable = '1' ORDER BY id DESC LIMIT ?,?";
+					stmt = conn.prepareStatement(querySql1);
+					stmt.setInt(1, (currentPage - 1) * perPage);
+					stmt.setInt(2, perPage);
+				} else {
+					querySql1 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM goods_recommend ORDER BY id DESC LIMIT ?,?";
+					stmt = conn.prepareStatement(querySql1);
+					stmt.setInt(1, (currentPage - 1) * perPage);
+					stmt.setInt(2, perPage);
+				}
 			}else{
-				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
+				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
 				System.out.println(querySql2);
 				stmt = conn.prepareStatement(querySql2);
 //				stmt.setInt(1, (currentPage - 1) * perPage);
@@ -44,7 +53,7 @@ public class HotRecommendDao {
 		
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime")));
+				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"),rs.getString("enable")));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -164,7 +173,7 @@ public class HotRecommendDao {
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				good = new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"));
+				good = new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"),rs.getString("enable"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
