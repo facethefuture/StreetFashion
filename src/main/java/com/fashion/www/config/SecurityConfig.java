@@ -24,14 +24,15 @@ import com.fashion.www.user.UserService;
 @EnableWebSecurity
 @ComponentScan(basePackages={"com.fashion.www.user","com.fashion.www.login"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
-	@Autowired 
+	@Autowired
 	UserService userService;
 	@Autowired
 	JWTLoginFilter jwtLoginFilter;
+	jwtLoginFilter.setAuthenticationManager(authenticationManager())
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.userDetailsService(userService);
-		
+
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -42,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .anyRequest().authenticated()
 //      验证登陆
         .and()
-        .addFilter(new JWTLoginFilter(authenticationManager()))
+        .addFilter(jwtLoginFilter)
 //        验证token
         .addFilter(new JWTAuthenticationFilter(authenticationManager()));
 //		.and().formLogin().loginPage("/login").successHandler(
@@ -55,5 +56,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 //		).failureHandler(new MyAuthenticationFailureHandler()).loginProcessingUrl("/login")
 //		.and().logout().permitAll().and().csrf().disable();
 	}
-	
+
 }

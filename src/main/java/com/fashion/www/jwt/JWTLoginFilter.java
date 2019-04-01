@@ -24,15 +24,21 @@ import com.fashion.www.user.User;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+@Component
 public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter{
 //	@Autowired
 //	UserRepository userRepository;
-//	这里因为没有默认的构造器，所以不能用@Component   不能被容器管理的话  就不能使用自动注入了  
+//	这里因为没有默认的构造器，所以不能用@Component   不能被容器管理的话  就不能使用自动注入了
 	UserRepository userRepository = new UserRepository();
 	private AuthenticationManager authenticationManager;
+	public JWTLoginFilter(){
+	}
 	public JWTLoginFilter(AuthenticationManager authenticationManager){
 		System.out.println("构造");
 		this.authenticationManager = authenticationManager;
+	}
+	piblic void setAuthenticationManager(AuthenticationManager authentication){
+	    this.authenticationManager = authentication;
 	}
 	@Override
 	public Authentication attemptAuthentication(HttpServletRequest req,HttpServletResponse res) throws AuthenticationException{
