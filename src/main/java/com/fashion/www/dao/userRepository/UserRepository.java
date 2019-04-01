@@ -15,9 +15,9 @@ import org.springframework.stereotype.Repository;
 import com.fashion.www.user.User;
 @Repository
 public class UserRepository {
-//	@Autowired
-//	private DataSource dataSource;
-	DataSource dataSource = new BasicDataSource();
+	@Autowired
+	private DataSource dataSource;
+//	DataSource dataSource = new BasicDataSource();
 	public User findOneUser(String username) {
 		System.out.println("查询USER");
 		Connection conn = null;

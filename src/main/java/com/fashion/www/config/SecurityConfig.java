@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -26,9 +27,11 @@ import com.fashion.www.user.UserService;
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Autowired
 	UserService userService;
-	@Autowired
-	JWTLoginFilter jwtLoginFilter;
-	jwtLoginFilter.setAuthenticationManager(authenticationManager())
+	@Bean
+	public JWTLoginFilter getJWTLoginFilter() throws Exception{
+		JWTLoginFilter loginFilter = new JWTLoginFilter(authenticationManager());
+		return loginFilter;
+	}
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.userDetailsService(userService);
@@ -43,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .anyRequest().authenticated()
 //      验证登陆
         .and()
-        .addFilter(jwtLoginFilter)
+        .addFilter(getJWTLoginFilter())
 //        验证token
         .addFilter(new JWTAuthenticationFilter(authenticationManager()));
 //		.and().formLogin().loginPage("/login").successHandler(
