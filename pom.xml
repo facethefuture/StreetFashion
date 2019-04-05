@@ -150,12 +150,12 @@
                 <path>/</path>
             	 <port>80</port>
                 <uriEncoding>UTF-8</uriEncoding>
-     			<!--<keystoreFile>C:/www.4bbbb.cn.jks</keystoreFile>-->
-     			<!--<keystorePass>44226p222h</keystorePass>-->
-     			<!--<httpsPort>443</httpsPort>-->
-     			<!--<SSLEnabled>true</SSLEnabled>-->
-     			<!--<clientAuth>false</clientAuth>-->
-     			<!--<sslProtocol>TLS</sslProtocol>-->
+     			<keystoreFile>C:/www.4bbbb.cn.jks</keystoreFile>
+     			<keystorePass>44226p222h</keystorePass>
+     			<httpsPort>443</httpsPort>
+     			<SSLEnabled>true</SSLEnabled>
+     			<clientAuth>false</clientAuth>
+     			<sslProtocol>TLS</sslProtocol>
             </configuration>
         </plugin>
     </plugins>
