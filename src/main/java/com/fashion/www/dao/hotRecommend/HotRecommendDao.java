@@ -19,7 +19,7 @@ public class HotRecommendDao {
 	@Autowired
 	private DataSource dataSource;
 	public List<Goods> queryHotRecommends(int currentPage,int perPage,String description){
-		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' ORDER BY id DESC LIMIT ?,?";
+		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = 1 ORDER BY id DESC LIMIT ?,?";
 
 		
 		Connection conn = null;
@@ -33,7 +33,7 @@ public class HotRecommendDao {
 				stmt.setInt(1, (currentPage - 1) * perPage);
 				stmt.setInt(2, perPage);
 			}else{
-				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
+				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM goods_recommend WHERE enable = 1 AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
 				System.out.println(querySql2);
 				stmt = conn.prepareStatement(querySql2);
 //				stmt.setInt(1, (currentPage - 1) * perPage);
@@ -76,7 +76,7 @@ public class HotRecommendDao {
 		return goods;
 	}
 	public int getTotalCount(String description){
-		String querySql = description == null ? "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = '1'" : "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = '1' AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
+		String querySql = description == null ? "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = 1" : "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = 1 AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
 		System.out.println(querySql);
 		Connection conn = null;
 		PreparedStatement stmt = null;
