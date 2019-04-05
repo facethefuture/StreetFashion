@@ -48,12 +48,11 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter{
 		System.out.println("查询前");
 		String username = req.getParameter("username");
         String password = req.getParameter("password");
+        System.out.println("传过来的账号：" + username + "，传过来的密码：" + password);
 		User user = userRepository.findOneUser(username);
-//		User user = new User(1,"admin","123","管理员","USER");
-		System.out.println("查询到人了");
 		System.out.println(JSON.toJSONString(user));
-	
-		if (user == null) {
+		System.out.println("账号： " + username + "，" + "密码：" + password);
+		if (user == null || !user.getPassword().equals(password)) {
 			 throw new UsernameNotFoundException("账号或密码错误");
 		}
         if (username == null) {
