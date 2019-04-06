@@ -30,6 +30,7 @@ public class RootConfig extends WebMvcConfigurerAdapter{
 		dataSource.setInitialSize(10);
 		dataSource.setMinIdle(5);
 		dataSource.setMaxIdle(20);
+		dataSource.setMaxWait(31536000);
 		return dataSource;
 	}
 	@Override
