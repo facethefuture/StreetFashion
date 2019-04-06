@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 //		 允许以下请求
         .antMatchers("/login").permitAll().antMatchers("/hellow").permitAll()
 //         所有请求需要身份认证
-        .anyRequest().authenticated()
+        .antMatchers("/admin").authenticated()
 //      验证登陆
         .and()
         .addFilter(getJWTLoginFilter())
