@@ -2,6 +2,8 @@ package com.fashion.www.controller.hotRecommend;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,11 +25,11 @@ public class HotRecommend {
 	private HotRecommendDao hotRecommend;
 	@RequestMapping(value="/hotRecommend")
 	@ResponseBody
-	public String getHotRecommend(@RequestParam(value="page",defaultValue="1") int page,@RequestParam(value="perPage",defaultValue="10") int perPage,@RequestParam(value="description",required=false) String description,@RequestParam(value="enable",required=false) String enable){
-		System.out.println(description);
+	public String getHotRecommend(@RequestParam(value="page",defaultValue="1") int page,@RequestParam(value="perPage",defaultValue="10") int perPage,@RequestParam(value="description",required=false) String description,@RequestParam(value="enable",defaultValue="1") int enable) throws UnsupportedEncodingException{
+		System.out.println(URLDecoder.decode(description == null ? "" : description, "utf-8"));
 		System.out.println(description == null);
-		Page<Goods> pageObj = new Page<Goods>(page,perPage,hotRecommend.getTotalCount(description));
-		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage,description,enable));
+		Page<Goods> pageObj = new Page<Goods>(page,perPage,hotRecommend.getTotalCount(description == null ? description : URLDecoder.decode( description, "utf-8")));
+		pageObj.setDataList(hotRecommend.queryHotRecommends(page,perPage,description == null ? description : URLDecoder.decode( description, "utf-8"),enable));
 		return JSON.toJSONString(pageObj);
 	}
 	@RequestMapping(value="/streetSnap/{id}")
