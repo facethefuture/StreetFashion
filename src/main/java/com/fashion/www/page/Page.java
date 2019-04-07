@@ -34,4 +34,7 @@ public class Page<T> {
 	public void setDataList(List<T> list){
 		this.dataList = list;
 	}
+	public int getTotalRecord(){
+		return this.totalRecord;
+	}
 }  

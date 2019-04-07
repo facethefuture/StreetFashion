@@ -7,13 +7,15 @@ public class Goods {
 	private String description;
 	private String tags;
 	private int createdTime;
-	public Goods(int id,String title,String coverImage,String description,String tags,int createdTime){
+	private String enable;
+	public Goods(int id,String title,String coverImage,String description,String tags,int createdTime,String enable){
 		this.id = id;
 		this.title = title;
 		this.coverImage = coverImage;
 		this.description = description;
 		this.tags = tags;
 		this.createdTime = createdTime;
+		this.enable = enable;
 	}
 	public int getId(){
 		return this.id;
@@ -32,5 +34,8 @@ public class Goods {
 	}
 	public int getCreatedTime(){
 		return this.createdTime;
+	}
+	public String getEnable(){
+		return this.enable;
 	}
 }

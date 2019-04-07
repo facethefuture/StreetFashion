@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8ed5e07f-bc94-4089-bd0f-01229c1055f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fashion/www/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fashion/www/config/RootConfig.java" afterDir="false" />
     </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="8ed5e07f-bc94-4089-bd0f-01229c1055f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fashion/www/jwt/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fashion/www/jwt/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fashion/www/jwt/JWTLoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fashion/www/jwt/JWTLoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-03" beforeDir="false" />
+    </list>
+=======
+    <list default="true" id="8ed5e07f-bc94-4089-bd0f-01229c1055f4" name="Default Changelist" comment="" />
+>>>>>>> master
+>>>>>>> dev
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +32,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
@@ -21,6 +40,22 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/upload/UploadFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
@@ -28,52 +63,124 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/hotRecommend/HotRecommend.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="188">
               <caret line="27" column="263" selection-start-line="27" selection-start-column="263" selection-end-line="27" selection-end-column="263" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="197">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1280#1287#0" expanded="true" />
+=======
+            <state relative-caret-position="-8">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+>>>>>>> dev
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/hotRecommend/HotRecommendDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="504">
               <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+=======
+            <state relative-caret-position="-8">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/photography/PhotographyController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="79">
               <caret line="14" selection-start-line="14" selection-end-line="15" />
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/login/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/photography/PhotographyDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="78" column="176" selection-start-line="78" selection-start-column="176" selection-end-line="78" selection-end-column="176" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/photography/PhotographyDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
               <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-250">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/goods/Goods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="682">
               <caret line="50" column="45" lean-forward="true" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/userRepository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-220">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/hotRecommend/HotRecommendDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="189" column="43" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-484">
@@ -81,19 +188,48 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/user/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-245">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/hotRecommend/PhotographyModuleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/RootConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
               <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+=======
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="158" column="28" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/goods/PhotographyModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/login/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,10 +238,45 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1276">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="152" column="8" lean-forward="true" selection-start-line="152" selection-start-column="8" selection-end-line="157" selection-end-column="46" />
+>>>>>>> master
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/ExpiredJwtException.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> master
+        </entry>
+      </file>
+>>>>>>> dev
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -114,11 +285,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java" />
+=======
         <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/controller/upload/UploadFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/dao/hotRecommend/HotRecommendDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/dao/photography/PhotographyDao.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/fashion/www/config/RootConfig.java" />
+=======
+>>>>>>> master
+>>>>>>> dev
       </list>
     </option>
   </component>
@@ -200,7 +379,15 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
               <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+<<<<<<< HEAD
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
             </path>
             <path>
               <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -211,7 +398,15 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
               <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+=======
+              <item name="hotRecommend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
             </path>
             <path>
               <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -222,8 +417,17 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
               <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="hotRecommend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="hotRecommend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="photography" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
             </path>
             <path>
               <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -234,8 +438,17 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
               <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="photography" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="photography" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="upload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
             </path>
             <path>
               <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -246,40 +459,76 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+<<<<<<< HEAD
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="upload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
+            </path>
+            <path>
+              <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="hellow" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+<<<<<<< HEAD
+              <item name="jwt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hotRecommend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> dev
+            </path>
+            <path>
+              <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="jwt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="photography" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
+            </path>
+            <path>
+              <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+<<<<<<< HEAD
+              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+<<<<<<< HEAD
+              <item name="login" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
               <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hellow" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jwt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="fashion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="fashion" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="fashion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="www" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> master
+>>>>>>> dev
             </path>
           </expand>
           <select />
@@ -291,11 +540,23 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554527931287" />
+=======
+<<<<<<< HEAD
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554483330495" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554296341667" />
+>>>>>>> dev
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+>>>>>>> master
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -309,6 +570,58 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+=======
+>>>>>>> master
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -320,20 +633,36 @@
       <option name="presentableId" value="Default" />
       <updated>1554295704500</updated>
       <workItem from="1554295709260" duration="1135000" />
+<<<<<<< HEAD
+      <workItem from="1554297245497" duration="629000" />
+=======
       <workItem from="1554297245497" duration="1307000" />
       <workItem from="1554380170233" duration="1491000" />
       <workItem from="1554430550202" duration="5344000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9513000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="13628000" />
+=======
+    <option name="totallyTimeSpent" value="9277000" />
+>>>>>>> master
+>>>>>>> dev
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25798404" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25798404" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -349,16 +678,30 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.499501" weight="0.31690142" />
+=======
+<<<<<<< HEAD
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.37122735" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.499501" visible="true" weight="0.31690142" />
+>>>>>>> dev
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.500499" side_tool="true" weight="0.2112676" />
+>>>>>>> master
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32997987" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
+      <window_info anchor="right" id="Maven" order="3" />
+=======
       <window_info anchor="right" id="Maven" order="3" weight="0.32984033" />
+>>>>>>> master
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -370,6 +713,35 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.1.1.RELEASE/spring-security-config-4.1.1.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="227" column="6" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/photography/PhotographyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/upload/UploadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/photography/PhotographyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="78" column="176" selection-start-line="78" selection-start-column="176" selection-end-line="78" selection-end-column="176" />
+        </state>
+      </provider>
+=======
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -389,10 +761,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> master
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/goods/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
+<<<<<<< HEAD
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+=======
           <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
@@ -401,6 +784,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="189" column="43" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
@@ -411,6 +795,23 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/userRepository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="158" column="28" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/goods/PhotographyModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -418,16 +819,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/hotRecommend/HotRecommend.java">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="27" column="263" selection-start-line="27" selection-start-column="263" selection-end-line="27" selection-end-column="263" />
+        <state relative-caret-position="442">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/login/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/hotRecommend/HotRecommend.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="188">
+          <caret line="27" column="263" selection-start-line="27" selection-start-column="263" selection-end-line="27" selection-end-column="263" />
+=======
+        <state relative-caret-position="-8">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+>>>>>>> master
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/ExpiredJwtException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/jwt/JWTAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+>>>>>>> dev
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/hotRecommend/HotRecommend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1280#1287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/dao/hotRecommend/HotRecommendDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+=======
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fashion/www/controller/photography/PhotographyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -458,6 +925,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="504">
           <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
         </state>
@@ -467,6 +935,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+=======
+        <state relative-caret-position="255">
+          <caret line="152" column="8" lean-forward="true" selection-start-line="152" selection-start-column="8" selection-end-line="157" selection-end-column="46" />
+>>>>>>> master
+>>>>>>> dev
         </state>
       </provider>
     </entry>
@@ -475,7 +948,10 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
+<<<<<<< HEAD
+=======
           <last-edited>1.7</last-edited>
+>>>>>>> master
           <splitter-proportions>
             <option name="proportions">
               <list>

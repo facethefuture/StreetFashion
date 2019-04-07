@@ -16,7 +16,7 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-@ComponentScan(basePackages={"com.fashion.www.dao"})
+@ComponentScan(basePackages={"com.fashion.www.dao","com.fashion.www.jwt"})
 //@Import({org.apache.maven.archetypes.securityConfig.SecurityWebApplicationInitializer.class})
 @Import({com.fashion.www.config.SecurityConfig.class})
 public class RootConfig extends WebMvcConfigurerAdapter{

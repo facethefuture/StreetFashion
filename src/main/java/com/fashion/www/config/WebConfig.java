@@ -60,6 +60,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		StringHttpMessageConverter converter = new StringHttpMessageConverter();
 		List<MediaType> mediaTypes = new ArrayList<MediaType>();
 		mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+		mediaTypes.add(MediaType.APPLICATION_FORM_URLENCODED);
+		mediaTypes.add(MediaType.ALL);
 		converter.setSupportedMediaTypes(mediaTypes);
 		converters.add(converter);
     }
