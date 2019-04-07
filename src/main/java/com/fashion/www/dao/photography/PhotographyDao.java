@@ -18,10 +18,10 @@ import com.fashion.www.goods.Goods;
 public class PhotographyDao {
 	@Autowired
 	private DataSource dataSource;
-	public List<Goods> queryPhotographies(int currentPage,int perPage,String description){
-		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM photography WHERE enable = 1 ORDER BY id DESC LIMIT ?,?";
 
-		
+	public List<Goods> queryPhotography(int currentPage,int perPage,String description,int enable,int startTime,int endTime){
+		String querySql = "SELECT id,title,coverImage,description,tags,createdTime FROM photography WHERE enable = 1 AND createdTime > startTime AND createdTime < endTime ORDER BY id DESC LIMIT ?,?";
+
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -29,19 +29,31 @@ public class PhotographyDao {
 		try{
 			conn = dataSource.getConnection();
 			if (description == null){
-				stmt = conn.prepareStatement(querySql);
-				stmt.setInt(1, (currentPage - 1) * perPage);
-				stmt.setInt(2, perPage);
+				String querySql1 = null;
+				if (enable == 1) {
+					querySql1 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM photography WHERE enable = 1 AND createdTime > ? AND createdTime < ?  ORDER BY id DESC LIMIT ?,?";
+					stmt = conn.prepareStatement(querySql1);
+					stmt.setInt(1,startTime);
+					stmt.setInt(2,endTime);
+					stmt.setInt(3, (currentPage - 1) * perPage);
+					stmt.setInt(4, perPage);
+
+				} else {
+					querySql1 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM photography WHERE createdTime > ? AND createdTime < ? ORDER BY id DESC LIMIT ?,?";
+					stmt = conn.prepareStatement(querySql1);
+					stmt.setInt(1,startTime);
+					stmt.setInt(2,endTime);
+					stmt.setInt(3, (currentPage - 1) * perPage);
+					stmt.setInt(4, perPage);
+				}
 			}else{
-				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime FROM photography WHERE enable = 1 AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
+				String querySql2 = "SELECT id,title,coverImage,description,tags,createdTime,enable FROM photography WHERE enable = 1 AND createdTime > " +  startTime + " AND createdTime < " + endTime+ " AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%') ORDER BY id DESC LIMIT " + (currentPage - 1) * perPage + "," + perPage;
 				System.out.println(querySql2);
 				stmt = conn.prepareStatement(querySql2);
 //				stmt.setInt(1, (currentPage - 1) * perPage);
 //				stmt.setInt(2, currentPage * perPage);
-				
+
 			}
-			
-		
 			rs = stmt.executeQuery();
 			while(rs.next()){
 				goods.add(new Goods(rs.getInt("id"),rs.getString("title"),rs.getString("coverImage"),rs.getString("description"),rs.getString("tags"),rs.getInt("createdTime"),rs.getString("enable")));
@@ -75,8 +87,13 @@ public class PhotographyDao {
 		}
 		return goods;
 	}
-	public int getTotalCount(String description){
-		String querySql = description == null ? "SELECT COUNT(id) AS count FROM photography WHERE enable = 1" : "SELECT COUNT(id) AS count FROM goods_recommend WHERE enable = 1 AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
+	public int getTotalCount(String description,int enable,int startTime,int endTime){
+		String querySql;
+		if (enable == 1) {
+			querySql = description == null ? "SELECT COUNT(id) AS count FROM photography WHERE enable = 1 AND createdTime >" +  startTime + " AND createdTime < " +endTime : "SELECT COUNT(id) AS count FROM photography WHERE enable = 1 AND createdTime > startTime AND createdTime < endTime AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
+		} else {
+			querySql = description == null ? "SELECT COUNT(id) AS count FROM photography WHERE createdTime > " + startTime + " AND createdTime < " + endTime : "SELECT COUNT(id) AS count FROM photography WHERE createdTime > " + startTime + " AND createdTime < " + endTime + " AND (description LIKE '%" + description + "%' OR tags LIKE '%" + description + "%')";
+		}
 		System.out.println(querySql);
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -194,5 +211,36 @@ public class PhotographyDao {
 			}
 		}
 		return good;
+	}
+	public void updatePhotographyById(int id, int enable) {
+		String sqlStr = "UPDATE photography SET enable = ? WHERE id = ?";
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try{
+			conn = dataSource.getConnection();
+			stmt = conn.prepareStatement(sqlStr);
+			stmt.setInt(1,enable);
+			stmt.setInt(2,id);
+			System.out.println("执行更新");
+			System.out.println(stmt.executeUpdate());
+		} catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try{
+				if(stmt != null) {
+					stmt.close();
+				}
+			}catch(SQLException e){
+				e.printStackTrace();
+			}finally {
+				try{
+					if(conn != null) {
+						conn.close();
+					}
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 }
